@@ -42,6 +42,17 @@ public class BordView extends Region {
     private int kolom;
 
     private VierOpEenRij model;
+    
+    public int getKolom(int kolom){
+        return kolom/7;
+    }
+    
+    public int getRij(int rij){
+        return rij/6;
+    }
+
+   
+    
 
     /**
      * constructor for objects of class Bordview
@@ -74,6 +85,7 @@ public class BordView extends Region {
             this.getChildren().add(sView);
         }
     }
+    
 
     /**
      * methode om het rooster te maken
@@ -95,7 +107,15 @@ public class BordView extends Region {
 
         return bord;
     }
-
+    private ArrayList<Rectangle> balkenLijst;
+    public BordView(){
+        balkenLijst = new ArrayList<>();
+        
+   }
+    
+    public ArrayList<Rectangle> getBalk() {
+        return balkenLijst;
+    }
     /**
      * methode om transparante balken over de kolom te maken
      *
@@ -114,6 +134,10 @@ public class BordView extends Region {
             lijst.add(r);
         }
         return lijst;
+    }
+
+    Schijf getSchijven() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

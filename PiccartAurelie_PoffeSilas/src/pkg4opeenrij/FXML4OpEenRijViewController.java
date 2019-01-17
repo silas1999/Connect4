@@ -12,6 +12,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.event.Event;
+import javafx.scene.input.MouseEvent;
 
 public class FXML4OpEenRijViewController{
 
@@ -43,7 +45,7 @@ public class FXML4OpEenRijViewController{
         assert spelPane != null : "fx:id=\"spelPane\" was not injected: check your FXML file 'FXML4OpEenRijView.fxml'.";
         
         btnHerstart.setOnAction(event -> handleButtonAction());
-        //spelPane.setOnMouseClicked(event -> handleMouseClick(event)); 
+        /*spelPane.setOnMouseClicked(this::plaatsSchijf); */
     }
 
     void setModel(VierOpEenRij model) {
@@ -51,9 +53,27 @@ public class FXML4OpEenRijViewController{
         bordView = new BordView(model);
         spelPane.getChildren().add(bordView);
     }
+    /*private final boolean beurtRood=true;*/
+    /*public void handleMouseClick(MouseEvent mouseEvent){
+        int x = (int) mouseEvent.getX();                                    
+        int y = (int) mouseEvent.getY();                                    
+        
+            model.updateRooster();                                   
+
+        bordView.update(); 
+            
+    }*/
+    /*public void plaatsSchijf(MouseEvent e) {
+        double x = e.getX();
+        double y = e.getY();
+        if getBalk
+           
+            }
+            view.update();*/
+        }
     
-    //public void handleMouseClick(MouseEvent mouseEvent) 
+    
 
 
 
-}
+

@@ -90,7 +90,13 @@ public class VierOpEenRij {
       rooster[kolom][rijSchijf]= s;
       beurtRood =!beurtRood;
       }
-    
+    public boolean getBeurt(){
+        return beurtRood;
+    }
+    public void updateRooster(){
+        gooiSchijf(schijvenLijst, kolom);
+
+}
     /**
      * methode om einde van een spel te bepalen, maw of er al 4 op een rij is
      * @param kolom
@@ -143,6 +149,10 @@ public boolean controle(List<Point2D> puntjes){
             }
         }
         return false;
+    }
+
+    private void gooiSchijf(ArrayList<Schijf> schijvenLijst, int kolom) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
 	
